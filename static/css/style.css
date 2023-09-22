@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(95, 112, 126);
+}
+
+body .container {
+  overflow: hidden;
+  background: #0b0922;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .container .menu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
+body .container .menu img {
+  width: 60px;
+}
+body .container .menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+body .container .menu ul li {
+  width: auto;
+  border-radius: 12px;
+}
+body .container .menu ul li:hover {
+  border: 1px solid indigo;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 5px 6px #0f2c8a;
+}
+body .container .menu ul li:active {
+  background: #0f2c8a;
+}
+body .container .menu .icons {
+  display: flex;
+  gap: 20px;
+}
+body .container .menu .icons a {
+  font-size: 20px;
+}
+body .container .component {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .container .component .left h1 {
+  color: white;
+  font-size: 25px;
+  font-family: "Fira Code", monospace;
+}
+body .container .component .riht img {
+  width: 400px;
+  border-radius: 50%;
+}
+body .container .end {
+  display: flex;
+  justify-content: center;
+}
+body .container .end .svg-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .end .svg-frame svg {
+  position: absolute;
+  transition: 0.5s;
+  z-index: calc(1 - 0.2 * var(--j));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+body .container .end .svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+body .container .end .svg-frame svg #center {
+  transition: 0.5s;
+  transform-origin: center;
+}
+body .container .end .svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+body .container .end #out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+body .container .end #out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+body .container .end #inner3,
+body .container .end #inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+body .container .end #center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
